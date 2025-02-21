@@ -1,6 +1,7 @@
 import './App.css'
 import Bomdia from './components/Bomdia'
 import Cachorro from './components/Cachorro'
+import Counter from './components/Counter'
 import Descricao from './components/Descricao'
 import Meunome from './components/Meunome'
 import Pai from './components/Pai'
@@ -21,6 +22,8 @@ function App() {
       <Descricao nome="Xirigutago" idade={34} />
       {/* 6.5 - Desestruturacao de Props */}
       <Cachorro nome={"Chewie"} raca={"Lhasa-Apso"}/>
+      {/* 6.6 - useState - Hook */}
+      <Counter />
     </>
   )
 }
