@@ -4,7 +4,7 @@ const Bomdia = () => {
 
     return (
 
-        <h3>Bom dia {name}</h3>
+        <h3>Bom dia {name}!</h3>
 
   )
 }
