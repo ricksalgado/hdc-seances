@@ -1,5 +1,6 @@
 import './App.css'
 import Bomdia from './components/Bomdia'
+import Button from './components/Button'
 import Cachorro from './components/Cachorro'
 import Counter from './components/Counter'
 import Descricao from './components/Descricao'
@@ -27,6 +28,9 @@ function App() {
       <Counter />
       {/* 6.7 - multiplos Estados */}
       <UserInfoForm/>
+      {/* 6.8 - Events */}
+      <Button />
+
     </>
   )
 }
