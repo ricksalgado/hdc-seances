@@ -5,9 +5,6 @@ function Pai() {
         <div>
             <Filho/>
             <Filho/>
-            <Filho/>
-            <Filho/>
-            <Filho/>
         </div>
     )
   

@@ -1,4 +1,3 @@
-import React from 'react'
 import SunFunction from './SunFunction';
 
 const PaiFunction = () => {
