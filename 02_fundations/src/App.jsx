@@ -6,6 +6,7 @@ import Counter from './components/Counter'
 import Descricao from './components/Descricao'
 import Meunome from './components/Meunome'
 import Pai from './components/Pai'
+import PaiFunction from './components/PaiFunction'
 import UserInfoForm from './components/UserInfoForm'
 import Welcome from './components/Welcome'
 
@@ -30,7 +31,8 @@ function App() {
       <UserInfoForm/>
       {/* 6.8 - Events */}
       <Button />
-
+      {/* 6.9 - Passando funcoes de manipulacao de eventos como props */}
+      <PaiFunction/>
     </>
   )
 }
