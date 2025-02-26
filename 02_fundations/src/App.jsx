@@ -11,6 +11,7 @@ import Pai from './components/Pai'
 import PaiFunction from './components/PaiFunction'
 import RenderCondicional from './components/RenderCondicional'
 import UserInfoForm from './components/UserInfoForm'
+import Warning from './components/Warning'
 import Welcome from './components/Welcome'
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
       {/* 6.12 - Expressao ternaria */}
       <LoginBtn loggedIn={false}/>
       <LoginBtn loggedIn={true}/>
+      {/* 6.13 - Render Nulo */}
+      <Warning warning={true} />
 
     </>
   )
