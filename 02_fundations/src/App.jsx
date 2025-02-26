@@ -7,6 +7,7 @@ import Descricao from './components/Descricao'
 import Forms from './components/Forms'
 import LoginBtn from './components/LoginBtn'
 import Meunome from './components/Meunome'
+import NumberList from './components/NumberList'
 import Pai from './components/Pai'
 import PaiFunction from './components/PaiFunction'
 import RenderCondicional from './components/RenderCondicional'
@@ -46,6 +47,8 @@ function App() {
       <LoginBtn loggedIn={true}/>
       {/* 6.13 - Render Nulo */}
       <Warning warning={true} />
+      {/* 6.14 - Listas Chaves */}
+      <NumberList numbers={[1,2,3,4,5,6]}/>
 
     </>
   )
