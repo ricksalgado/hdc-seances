@@ -1,5 +1,7 @@
 import './App.css'
 import Bomdia from './components/Bomdia'
+import BotaoAzul from './components/BotaoAzul'
+import BotaoEstilizado from './components/BotaoEstilizado'
 import Button from './components/Button'
 import Cachorro from './components/Cachorro'
 import Counter from './components/Counter'
@@ -49,7 +51,10 @@ function App() {
       <Warning warning={true} />
       {/* 6.14 - Listas Chaves */}
       <NumberList numbers={[1,2,3,4,5,6]}/>
-
+      {/* 6.15 - Estilos por atributos */}
+      <BotaoEstilizado/>
+      {/* 6.16 - Estilos globais */}
+      <BotaoAzul/>
     </>
   )
 }
