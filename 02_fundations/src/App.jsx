@@ -5,6 +5,7 @@ import BotaoEstilizado from './components/BotaoEstilizado'
 import Button from './components/Button'
 import Cachorro from './components/Cachorro'
 import Counter from './components/Counter'
+import CounterEx from './components/CounterEx'
 import Descricao from './components/Descricao'
 import Forms from './components/Forms'
 import Greetings from './components/Greetings'
@@ -57,9 +58,10 @@ function App() {
       {/* 6.16 - Estilos globais */}
       <BotaoAzul/>
       {/* 6.17 - Exercices */}
-      <p>
-        <Greetings name={false}/>
-      </p>
+      <div>
+        <Greetings name={"Rick"}/>
+      </div>
+      <CounterEx/>
 
     </>
   )
