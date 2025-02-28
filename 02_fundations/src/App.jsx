@@ -7,6 +7,7 @@ import Cachorro from './components/Cachorro'
 import Counter from './components/Counter'
 import Descricao from './components/Descricao'
 import Forms from './components/Forms'
+import Greetings from './components/Greetings'
 import LoginBtn from './components/LoginBtn'
 import Meunome from './components/Meunome'
 import NumberList from './components/NumberList'
@@ -55,6 +56,11 @@ function App() {
       <BotaoEstilizado/>
       {/* 6.16 - Estilos globais */}
       <BotaoAzul/>
+      {/* 6.17 - Exercices */}
+      <p>
+        <Greetings name={false}/>
+      </p>
+
     </>
   )
 }
