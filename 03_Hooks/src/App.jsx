@@ -4,6 +4,7 @@ import ComponenteFilho from './components/ComponenteFilho'
 import OnUseEffect from './components/OnUseEffect'
 import Timer from './components/Timer'
 import ValorDoContexto from './components/ValorDoContexto'
+import Contador from './components/Contador'
 
 function App() {
 
@@ -18,6 +19,9 @@ function App() {
         <ComponenteFilho/>
         <ValorDoContexto/>
       </MeuContextoProvider>
+      {/* 3.3 - useReducer */}
+      {/* igual useState mas com estados mais complexos */}
+      <Contador/>
     </>
   )
 }
