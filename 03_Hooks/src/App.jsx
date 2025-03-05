@@ -5,6 +5,7 @@ import OnUseEffect from './components/OnUseEffect'
 import Timer from './components/Timer'
 import ValorDoContexto from './components/ValorDoContexto'
 import Contador from './components/Contador'
+import Basket from './components/Basket'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       {/* 3.3 - useReducer */}
       {/* igual useState mas com estados mais complexos */}
       <Contador/>
+      <Basket/>
     </>
   )
 }
