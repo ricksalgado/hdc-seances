@@ -24,6 +24,8 @@ function App() {
       {/* igual useState mas com estados mais complexos */}
       <Contador/>
       <Basket/>
+      {/* 3.4 - custom hook */}
+      
     </>
   )
 }
