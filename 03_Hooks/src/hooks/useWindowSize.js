@@ -1,4 +1,4 @@
-import {useState, useEffect, useDebugValue} from 'react'
+import {useState, useEffect} from 'react'
 
 export default function useWindowSize(){
 
@@ -12,17 +12,17 @@ export default function useWindowSize(){
         function handleResize(){
             setWindowSize({
                 width: window.innerWidth,
-                height: window.innerWidth,
+                height: window.innerHeight,
             });
         }
 // evento que dispara a funcao
         window.addEventListener('resize', handleResize);
 
-        handleResize()
+        handleResize();
 
         // Limpeza de MEmoria
-        return () => window.removeEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize);
     }, [])
 
     return windowSize;
-},
+}

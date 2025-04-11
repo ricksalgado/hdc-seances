@@ -6,6 +6,7 @@ import Timer from './components/Timer'
 import ValorDoContexto from './components/ValorDoContexto'
 import Contador from './components/Contador'
 import Basket from './components/Basket'
+import DisplayWindowSite from './components/DisplayWindowSite'
 
 function App() {
 
@@ -25,9 +26,14 @@ function App() {
       <Contador/>
       <Basket/>
       {/* 3.4 - custom hook */}
-      
+      <DisplayWindowSite />
+
     </>
   )
 }
 
 export default App
+
+
+
+
