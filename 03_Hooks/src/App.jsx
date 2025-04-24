@@ -9,6 +9,7 @@ import Basket from './components/Basket'
 import DisplayWindowSite from './components/DisplayWindowSite'
 import Container from './components/Container'
 import Box from './components/Box'
+import UserProfile from './components/UserProfile'
 
 function App() {
 
@@ -38,6 +39,11 @@ function App() {
       <Box type=''>Cadastre-se</Box>
       <Box type='success'>Cadastro Realizado</Box>
       <Box type='error'>Cadastro nao realizado</Box>
+      {/* 3.6 - Sincronizar o estado com props */}
+      {/* prop => componente => Chamada de API => Resulta em um dado */}
+      <UserProfile userID={1}/>
+      <UserProfile userID={2}/>
+
     </>
   )
 }
