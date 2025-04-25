@@ -12,6 +12,7 @@ import Box from './components/Box'
 import UserProfile from './components/UserProfile'
 import HeavyCalc from './components/HeavyCalc'
 import ContadorCallback from './components/ContadorCallback'
+import Exercices from './components/Exercices'
 
 function App() {
 
@@ -48,6 +49,8 @@ function App() {
       {/* 3.7 - useMemo and useCallback */}
       <HeavyCalc number={5}/>
       <ContadorCallback></ContadorCallback>
+      {/* 3.8 - Exercices */}
+      <Exercices/>
 
     </>
   )
