@@ -10,7 +10,7 @@ const Box = ({ children, type= "info" }) => {
     case "error":
         bgColor = "salmon";
         break;
-    case "info":
+    // case "info":
     default:
         bgColor = "lightblue";
         

@@ -10,6 +10,8 @@ import DisplayWindowSite from './components/DisplayWindowSite'
 import Container from './components/Container'
 import Box from './components/Box'
 import UserProfile from './components/UserProfile'
+import HeavyCalc from './components/HeavyCalc'
+import ContadorCallback from './components/ContadorCallback'
 
 function App() {
 
@@ -43,6 +45,9 @@ function App() {
       {/* prop => componente => Chamada de API => Resulta em um dado */}
       <UserProfile userID={1}/>
       <UserProfile userID={2}/>
+      {/* 3.7 - useMemo and useCallback */}
+      <HeavyCalc number={5}/>
+      <ContadorCallback></ContadorCallback>
 
     </>
   )
