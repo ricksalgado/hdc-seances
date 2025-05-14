@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import useOnlineStatus from "../hooks/useOnlineStatus";
 
 // - Exercício 1: Uso de useEffect para Sincronização de Dados
 // Enunciado:
@@ -14,7 +15,7 @@ const Escalacao = ({ jogador }) => {
 
   return (
     <div>
-      <h1>Exercices</h1>
+      <h1>Shopify zecicios</h1>
       <h2>Exercicio 1</h2>
       <p>Props Jogador: {jogador.name}</p>
       <p>O Jogador é um: {jogador.posicao}</p>
@@ -36,17 +37,19 @@ const Fibo = () => {
     return num1 + num2;
   }, [num1, num2]);
 
-let calcRender = () => {
-  setNum1(num2);
-  setNum2(result)
-} 
+  let calcRender = () => {
+    setNum1(num2);
+    setNum2(result);
+  };
 
   return (
     <div>
       <h2>Fibonacci Sequence</h2>
-      <p>Current: {num1} and {num2}</p>
+      <p>
+        Current: {num1} and {num2}
+      </p>
       <p>Next number is: {result}</p>
-      <button onClick={calcRender} >Next Number</button>
+      <button onClick={calcRender}>Next Number</button>
     </div>
   );
 };
@@ -55,6 +58,25 @@ let calcRender = () => {
 // Enunciado:
 // Crie um custom hook chamado useOnlineStatus que rastreia se o usuário está online ou offline.
 // Use este hook em um componente para exibir o status atual do usuário.
+
+const Connected = () => {
+  const isOnline = useOnlineStatus();
+
+  return (
+    <div
+      style={{
+        padding: "20px",
+        borderRadius: "10px",
+        backgroundColor: isOnline ? "lightgreen" : "salmon",
+        color: "#333",
+        fontWeight: "bold",
+        textAlign: "center",
+      }}
+    >
+      You are {isOnline ? "Online ✅" : "Offline ❌"}
+    </div>
+  );
+};
 
 // Renderiza a pg
 const Exercices = () => {
@@ -67,6 +89,7 @@ const Exercices = () => {
     <div>
       <Escalacao jogador={palmeiras} />
       <Fibo />
+      <Connected />
     </div>
   );
 };
