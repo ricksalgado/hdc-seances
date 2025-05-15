@@ -1,7 +1,7 @@
 import React from "react";
 import Task from "./Task";
 
-const TaskList = () => {
+const TaskList = ({tasks}) => {
   return (
     <div>
       <ul>
@@ -9,6 +9,9 @@ const TaskList = () => {
         <Task />
         <Task />
         <Task />
+        {tasks.map((task) -> (
+            <Task key={task.id} task={task} />
+        ))};
       </ul>
     </div>
   );
