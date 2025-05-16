@@ -1,17 +1,14 @@
 import React from "react";
 import Task from "./Task";
 
-const TaskList = ({tasks}) => {
+const TaskList = ({tasks, onDeleteTask }) => {
   return (
     <div>
       <ul>
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        {tasks.map((task) -> (
-            <Task key={task.id} task={task} />
-        ))};
+
+        {tasks.map((task) => (
+            <Task key={task.id} task={task} onDelete={() => onDeleteTask(task.id)} />
+        ))}
       </ul>
     </div>
   );

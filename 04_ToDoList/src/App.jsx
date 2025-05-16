@@ -12,11 +12,15 @@ function App() {
     // Local Storage
   };
 
+  const deleteTask = (taskId) => {
+    setTasks(tasks.filter((task) => task.id !== taskId));
+  }
+
   return (
     <div>
       <h1>Shopify do</h1>
       <TaskInput onAddTask={addTask} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} onDeleteTask={deleteTask} />
     </div>
   );
 }
