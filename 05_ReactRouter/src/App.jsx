@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <>
-      {/* 1 - Setup and initial configuration */}
+      {/* 5.1 - Setup and initial configuration */}
       <nav>
         <ul>
           <li>
@@ -20,6 +20,11 @@ function App() {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+          {/* 5.2 - NavLink */}
+          <li>
+            <NavLink className={({isActive}) => (isActive ? "active-link" : "") } to="/contact">Contact</NavLink>
+          </li>      
+{/* 5.3 - useNavigate */}
         </ul>
       </nav>
 
@@ -28,6 +33,8 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <h3>TA DANDO CERTO, PORRA</h3>
     </>
   );
 }
