@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import TaskDetails from "./pages/TaskDetails";
+import Error404 from "./pages/Error404";
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
             <Link to='/tasks/2'>Tarefa 2 </Link>
             <Link to='/tasks/3'>Tarefa 3 </Link>
           </li>
+          {/* 5.6 - 404 route */}
+          <li>
+            <Link to='/items/2'>Error</Link>
+          </li>
         </ul>
       </nav>
 
@@ -67,7 +72,8 @@ function App() {
         {/* 5.5 - Dinamic Routes */}
         <Route path="/tasks/:taskId" element={ <TaskDetails/> }  />
 
-        {/* 5.6 */}
+        {/* 5.6 - 404 route */}
+        <Route path="*" element={<Error404/>} />
       </Routes> 
 
       <h3>TA DANDO CERTO, PORRA</h3>
