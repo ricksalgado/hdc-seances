@@ -24,7 +24,7 @@ const AxiosPosts = () => {
     <div>
       <h2>Axios</h2>
       {error ? (
-        <p>Erro: {error}</p>
+        <p>Error: {error}</p>
       ) : (
         posts.map((post) => (
           <div key={post.id}>
