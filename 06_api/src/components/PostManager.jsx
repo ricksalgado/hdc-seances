@@ -5,6 +5,12 @@ import PostForm from "./PostForm";
 const PostManager = () => {
     const [posts, setPosts] = useState([]);
     const [error, setError] = useState("");
+
+    const handleSuccess = (post, operation) => {
+        if(operation === "add"){
+            setPosts((currentPosts) => [post, ...currentPosts] )
+        }
+    }
   
     useEffect(() => {
       const fetchPostsAxios = async () => {
@@ -23,7 +29,7 @@ const PostManager = () => {
   
     return (<div>
     <h2>Manage posts</h2>
-    <PostForm />
+    <PostForm onSuccess={handleSuccess} />
       <h1>Posts</h1>
       {posts.map((post) => (<div key={post.id} >
           <h2>{post.title}</h2>

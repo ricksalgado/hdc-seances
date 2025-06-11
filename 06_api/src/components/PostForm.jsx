@@ -1,12 +1,26 @@
 import { useState } from "react";
 import axios from "axios";
 
-const PostForm = () => {
+const PostForm = ( {onSuccess} ) => {
   const [title, setTitle] = useState("");
-  const [body, setBody] = ("");
+  const [body, setBody] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleSubmit =  async(e) => {
+        e.preventDefault();
+
+        const newPost = {title, body, userId: 1}
+
+            try {
+
+                const response = await axios.post("https://jsonplaceholder.typicode.com/posts", newPost)
+
+                // add post
+                onSuccess(response.data, "add");
+            } catch {
+                console.log("Post didn't upload: ", error)
+            }
+        
+
     }
 
   return (
@@ -18,7 +32,7 @@ const PostForm = () => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <br/>
-      <textarea value={body} placeholder="What is your message?" onChange={(e) => (e.target.value)} ></textarea>
+      <textarea value={body} placeholder="What is your message?" onChange={(e) => setBody(e.target.value)} ></textarea>
       <br/><button type="submit">Submit</button>
 
     </form>
