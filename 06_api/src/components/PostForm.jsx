@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
-const PostForm = ( {onSuccess} ) => {
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
+const PostForm = ( {post, onSuccess} ) => {
+  const [title, setTitle] = useState(post?.title || "");
+  const [body, setBody] = useState(post?.body || "");
+
+  useEffect(() => {
+    if (post) {
+
+      setTitle(post.title);
+      setBody(post.body)
+    }
+    }, [post] )
 
     const handleSubmit =  async(e) => {
         e.preventDefault();
@@ -11,11 +19,18 @@ const PostForm = ( {onSuccess} ) => {
         const newPost = {title, body, userId: 1}
 
             try {
+              if(post){
+                const response = axios.put(`https://jsonplaceholder.typicode.com/posts/${post.id}`, newPost);
+                onSuccess(response.data, "update");
+
+              } else {
 
                 const response = await axios.post("https://jsonplaceholder.typicode.com/posts", newPost)
 
                 // add post
                 onSuccess(response.data, "add");
+              }
+
             } catch {
                 console.log("Post didn't upload: ", error)
             }
