@@ -9,7 +9,8 @@ const PostForm = ( {post, onSuccess} ) => {
     if (post) {
 
       setTitle(post.title);
-      setBody(post.body)
+      setBody(post.body);
+
     }
     }, [post] )
 
@@ -20,7 +21,7 @@ const PostForm = ( {post, onSuccess} ) => {
 
             try {
               if(post){
-                const response = axios.put(`https://jsonplaceholder.typicode.com/posts/${post.id}`, newPost);
+                const response = await axios.put(`https://jsonplaceholder.typicode.com/posts/${post.id}`, newPost);
                 onSuccess(response.data, "update");
 
               } else {
@@ -29,13 +30,25 @@ const PostForm = ( {post, onSuccess} ) => {
 
                 // add post
                 onSuccess(response.data, "add");
+
+                setTitle("");
+                setBody("");
               }
 
-            } catch {
-                console.log("Post didn't upload: ", error)
+            } catch(error) {
+                console.log("Post didn't upload: ", error );
             }
-        
+    }
 
+    const handleDelete = async () => {
+      try {
+        await axios.delete(`https://jsonplaceholder.typicode.com/posts/${post.id}`);
+          onSuccess(post, "delete");
+          setTitle("");
+          setBody("");
+      } catch(error) {
+          console.log("Post didn't delete: ", error );
+      }
     }
 
   return (
@@ -49,9 +62,12 @@ const PostForm = ( {post, onSuccess} ) => {
       <br/>
       <textarea value={body} placeholder="What is your message?" onChange={(e) => setBody(e.target.value)} ></textarea>
       <br/><button type="submit">Submit</button>
+      {post && (
+        <button type="button" onClick={handleDelete}>Delete</button>
+      )}
 
     </form>
   );
-};
+}
 
 export default PostForm;
