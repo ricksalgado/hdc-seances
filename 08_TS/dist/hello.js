@@ -1,0 +1,1 @@
+console.log("Hello typescript Rick aqui, ola mundo");
