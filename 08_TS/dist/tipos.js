@@ -16,3 +16,35 @@ let user = { name: 'Rick', age: 35 };
 // Tuplas
 let rgb = [255, 34, 178];
 console.log(typeof rgb, rgb);
+// Funcoes
+function greet(nome) {
+    return `Hi, ${nome}`;
+}
+console.log(greet('Ricardo'));
+// ENUM
+var Directions;
+(function (Directions) {
+    Directions[Directions["Up"] = 0] = "Up";
+    Directions[Directions["Down"] = 1] = "Down";
+    Directions[Directions["Left"] = 2] = "Left";
+    Directions[Directions["Right"] = 3] = "Right";
+})(Directions || (Directions = {}));
+function getDirectionMessage(direction) {
+    switch (direction) {
+        case Directions.Up:
+            return "Moving up";
+        case Directions.Down:
+            return "Moving down";
+        case Directions.Left:
+            return "Moving left";
+        case Directions.Right:
+            return "Moving right";
+        default:
+            return "Ficou parado";
+            '';
+    }
+}
+console.warn(getDirectionMessage(Directions.Down));
+console.warn(getDirectionMessage(Directions.Down));
+console.warn(getDirectionMessage(Directions.Up));
+console.warn(getDirectionMessage(Directions.Left));
