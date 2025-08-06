@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Counter from './Components/Counter'
 import Greeting from './Components/Greeting'
+import TextInput from './Components/TextInput'
 
 function App() {
 
@@ -12,6 +11,10 @@ function App() {
       <h1>Shopfy React TS</h1>
       {/* 1 - functional component with TS */}
       <Greeting name="Printer's Parts" />
+      {/* 2- Hooks com typos */}
+      <Counter/>
+      {/* 3 - Manipulation of events with types */}
+      <TextInput />
     </div>
   )
 }
