@@ -1,6 +1,8 @@
 import './App.css'
+import Contador from './Components/Contador'
 import ContadorInterval from './Components/ContadorInterval'
 import Counter from './Components/Counter'
+import Exercices from './Components/Exercices'
 import Greeting from './Components/Greeting'
 import TextInput from './Components/TextInput'
 
@@ -18,6 +20,10 @@ function App() {
       <TextInput />
       {/* 4 - Custom hooks com TS */}
       <ContadorInterval />
+      {/* 5 - Exercicios */}
+      <Exercices />
+      {/* 6 - useReducer TS */}
+      <Contador/>
     </div>
   )
 }

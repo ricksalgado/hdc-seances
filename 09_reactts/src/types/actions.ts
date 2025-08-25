@@ -1,0 +1,1 @@
+export type CounterAction = {type: "increment"} | {type: "decrement"} | {type: "double"} | {type: "half"} | {type: "reset"}
