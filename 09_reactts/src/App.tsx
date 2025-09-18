@@ -5,6 +5,8 @@ import Counter from './Components/Counter'
 import Exercices from './Components/Exercices'
 import Greeting from './Components/Greeting'
 import TextInput from './Components/TextInput'
+import BarraFerramentas from './Components/BarraFerramentas'
+import { TemaProvider } from './Context/TemaContext'
 
 function App() {
 
@@ -15,7 +17,7 @@ function App() {
       {/* 1 - functional component with TS */}
       <Greeting name="Printer's Parts" />
       {/* 2- Hooks com typos */}
-      <Counter/>
+      <Counter />
       {/* 3 - Manipulation of events with types */}
       <TextInput />
       {/* 4 - Custom hooks com TS */}
@@ -23,7 +25,11 @@ function App() {
       {/* 5 - Exercicios */}
       <Exercices />
       {/* 6 - useReducer TS */}
-      <Contador/>
+      <Contador />
+      {/* 7 - Context API with TS */}
+      <TemaProvider>
+        <BarraFerramentas />
+      </TemaProvider>
     </div>
   )
 }
