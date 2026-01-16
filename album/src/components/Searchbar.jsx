@@ -1,11 +1,22 @@
-import React from 'react'
+import React from "react";
 
 const Searchbar = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
 
-export default Searchbar
+    const categorias = [
+        'Natureza',
+        'Pessoas',
+        'Tecnologia',
+        'Animais',
+        'Esportes'
+    ]
+
+  return (
+    <div className="search-bar">
+      <input type="text" placeholder="Pesquisar foto..." />
+      <button>Search</button>
+      <select>{categorias.map((categoria) => (<option key={categoria} value={categoria} >{categoria}</option> ))}</select>
+    </div>
+  );
+};
+
+export default Searchbar;
